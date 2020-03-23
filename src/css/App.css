@@ -1,0 +1,158 @@
+.App{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#80c7b0+0,ffebbc+100 */
+  background: #80c7b0; /* Old browsers */
+  background: -moz-linear-gradient(top,  #80c7b0 0%, #ffebbc 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #80c7b0 0%,#ffebbc 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #80c7b0 0%,#ffebbc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80c7b0', endColorstr='#ffebbc',GradientType=0 ); /* IE6-9 */
+
+}
+
+.header-login{
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 981px;
+  text-align: right;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.header-container{
+  /* border:1px solid black; */
+  height: auto;
+  width: 981px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 1);
+  margin:auto;
+  overflow: hidden;
+}
+
+#header-img-container{
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 400px;
+  height: auto;
+  position: relative;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.menubar-container{
+  /* border: 1px solid black; */
+  margin: auto;
+  /* overflow: hidden; */
+  position: relative;
+  height: auto;
+  width: 981px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 5px;
+}
+
+.bg-white{
+  background-color: rgba(255, 255, 255, 1) !important;
+}
+
+.container-container{
+  margin: auto;
+  /* overflow: hidden; */
+  position: relative;
+  height: auto;
+  width: 981px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 5px;
+}
+
+.img-product{
+  border: 1px solid black;
+  width: 300px;
+  height: 300px;
+}
+
+.container-product-form{
+  margin-top: 20px;
+  height: auto;
+  width: 980px;
+  overflow: hidden;
+}
+
+.container-display-img{
+  -webkit-box-shadow: -1px 0px 12px -2px rgba(0,0,0,0.53);
+  -moz-box-shadow: -1px 0px 12px -2px rgba(0,0,0,0.53);
+  box-shadow: -1px 0px 12px -2px rgba(0,0,0,0.53);
+  width: 105px;
+  height: 105px;
+  display: table;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.container-form2{
+  /* border: 1px solid black; */
+  width: auto;
+  height: auto;
+  margin-left: 50px;
+  margin-right: 50px;
+  position: relative;
+}
+
+.container-color-page{
+  /* border: 1px solid blue; */
+  margin-top: 20px;
+  height: auto;
+  width: 980px;
+  /* overflow: hidden; */
+}
+
+.container-color-form{
+  /* border: 1px solid black; */
+  height: auto;
+  width: 300px;
+  /* overflow: hidden; */
+  float: left;
+}
+
+.container-color-list{
+  /* border: 1px solid red; */
+}
+
+#choose-color-line{
+  /* border: 1px solid black; */
+  vertical-align: middle;
+  display: table;
+}
+
+.display-table-cell{
+  display: table-cell;
+}
+
+.manage-menu{
+  /* border: 1px solid black; */
+}
+
+.color-card-container{
+  /* border: 1px solid red; */
+  width: auto;
+  padding: 20px 20px;
+  cursor: pointer;
+}
+
+.color-card-pallete{
+  width: 50px;
+  height: 50px;
+  /* background-color: chocolate; */
+  margin: auto;
+}
+
+.button-nina-9{
+  padding: 6px;
+  font-size: 10pt;
+  color: white;
+  border: none;
+  background-color: palevioletred;
+  cursor: pointer;
+}

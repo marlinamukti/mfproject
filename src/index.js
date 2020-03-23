@@ -1,10 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import store from './redux/redux-store';
+// eslint-disable-next-line
+import UIkit from 'uikit' //buat atribut uikit
+import Icons from '../node_modules/uikit/dist/js/uikit-icons';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// loads the Icon plugin
+UIkit.use(Icons);
+
+ReactDOM.render(
+    <Provider store={store}>,
+        <App />, 
+    </Provider>,
+document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
