@@ -27,8 +27,7 @@ class App extends React.Component {
     this.state = {
       image:[],
       color:"black",
-      displayColorPicker: false,
-      imgThumbDisplay: require('../images/mf-icon.png')
+      displayColorPicker: false
     }
   }
 
@@ -36,40 +35,9 @@ class App extends React.Component {
     // this.uploadFile()
   }
 
-  uploadFile(par){
-    let data = new FormData();
-    let file = par;
-    let url = 'https://uwa-app1.akae.xyz/upload'
+  
 
-    data.append('file', file);
-    data.append('name', file.name)
-    axios.post(url, data, {
-      headers: {
-        'Authorization' : 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNGE0YmFlMTRmODdlMTM4Y2JlM2U3MyIsInVzZXJuYW1lIjoiYW5kaXRhMSIsImVtYWlsIjoiYW5kaXRha2Flc2FyMUBnbWFpbC5jb20iLCJpYXQiOjE1ODIzNTA4OTksImV4cCI6MTU4MjQzNzI5OX0.7A1ICPp3wjw6_PSGahRSnjaY0aGQAfId_v8m0Azviiw'
-      }
-    })
-    .then(res => {
-      console.log(res.data)
-      console.log('url',res.data.mediaImage.thumb_url)
-      this.setState({
-        imgThumbDisplay: res.data.mediaImage.thumb_url
-      })
-    })
-    .catch(er => console.log(er))
-  }
-
-  onPickImage = (event) =>{
-    console.log(event.target.files[0])
-    let {target} = event
-    let newImage = []
-    newImage.push(target.files[0])
-    // this.setState({
-    //   image: newImage
-    // })
-    
-    this.uploadFile(event.target.files[0])
-
-  }
+  
 
   onSaveProduct = () =>{
     // let data = new FormData();
@@ -191,7 +159,6 @@ class App extends React.Component {
                 <Products></Products>
               </Route>
               <Route path="/flower_bouquet">
-                <Products></Products>
               </Route>
               <Route path="/nylon_headband">
                 <Products></Products>
@@ -199,9 +166,10 @@ class App extends React.Component {
               <Route path="/lace_headband">
                 <Products></Products>
               </Route>
-              <Route path="/flower_crown">
-                <Products></Products>
-              </Route>
+                {/* <Route path="/flower_crown" filterBycategory="flower crown" render={(props) => <Products {...props} ></Products>}/> */}
+                {/* <Route path="flower_crown" component={() => <Products filterBycategory={`flower crown`} />} /> */}
+                <Route path="/flower_crown" render={(props) => <Products {...props} filterBycategory={`flower crown`} />} />
+
               <Route path="/animal_ears">
                 <Products></Products>
               </Route>
@@ -219,7 +187,8 @@ class App extends React.Component {
 // export default App
 function mapStateToProps(state){
   return{
-      user : state.users
+      user : state.users,
+      products : state.products
   }
 }
 

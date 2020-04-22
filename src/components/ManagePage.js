@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 
-import ProductForm from './productForm';
+// import ProductForm from './productForm';
 import ColorPage from './ColorPage';
+import ProductView from './ProductView'
 
 class ManagePage extends React.Component{
     constructor(props){
@@ -23,9 +24,9 @@ class ManagePage extends React.Component{
                         <Link to="/manage-color">
                             <span className="uk-label uk-label-success">Color</span>
                         </Link>
-                        <Link to="manage-products">
+                        {/* <Link to="manage-products">
                             <span className="uk-label uk-label-success">Products</span>
-                        </Link>
+                        </Link> */}
                         <Link to="manage-products-view">
                             <span className="uk-label uk-label-success">Product View</span>
                         </Link>
@@ -35,13 +36,11 @@ class ManagePage extends React.Component{
                         <Route path="/manage-color">
                             <ColorPage></ColorPage>
                         </Route>
-                        <Route path="/manage-products">
+                        {/* <Route path="/manage-products">
                             <ProductForm></ProductForm>
-                        </Route>
+                        </Route> */}
                         <Route path="/manage-products-view">
-                            <div>
-                                <h1>Product View</h1>
-                            </div>
+                            <ProductView></ProductView>
                         </Route>
                     </Switch>
                 </Router>

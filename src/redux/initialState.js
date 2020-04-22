@@ -1,6 +1,15 @@
 const initialState = {
     products:[
-        {name: "product 01", color:[], price: 45000}
+        {
+            id:"", 
+            name: "product 01", 
+            imgurl:"",
+            description: "lucu lucu cantik cantik", 
+            price:49000, 
+            category:"nylon headband", 
+            stock: 1, 
+            colors:["ff00ff"]
+        }
     ],
 
     colors: [],

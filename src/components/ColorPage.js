@@ -37,7 +37,12 @@ class ColorPage extends React.Component{
         .then(response => {
             // console.log(response.data.colors)
             // console.log(response.data)
-            this.props.fetchColors(response.data.colors)
+            let colors = response.data.colors.sort((a, b) => {
+                if (a.value < b.value) { return -1; }
+                if (a.value > b.value) { return 1; }
+                return 0;
+            })
+            this.props.fetchColors(colors)
         })
         .catch(error => console.log(error.response))
     }
@@ -166,7 +171,7 @@ class ColorPage extends React.Component{
 
                 <div className="uk-flex uk-flex-middle">
                     <div className="uk-card uk-card-default uk-card-body">
-                        <div className="container-color-form">
+                        <div className="container-color-form" data-uk-parallax="border-color: red">
                             <div className="container-form2">
                                 <span>
                                     <h3>Color</h3>
@@ -227,7 +232,7 @@ class ColorItem extends React.Component{
             backgroundColor : colors.value
         }
         return(
-            <div className="uk-width-auto@m" data-uk-toggle={"target: #my-id-"+colors.id+"; mode: hover"}>
+            <div data-uk-toggle={"target: #my-id-"+colors.id+"; mode: hover"}>
                 <div className="uk-card uk-card-default color-card-container">
                     <div className="color-card-pallete" style={bgcolor} 
                     onClick={this.props.onClikColor}
